@@ -26,53 +26,6 @@
     margin-top: 50px;
 }
 
-/* BUTTONS */
-
-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    height: 45px;
-    width: 342px;
-    font-size: 1.3em;
-    border-radius: 5px;
-    color: #FFF;
-    text-shadow: 1px 1px #000;
-    cursor: pointer;
-}
-
-button:focus {
-    outline: 0;
-}
-
-.greenButton {
-    background: -webkit-gradient(linear, left top, left bottom, from(#addc54), to(#7ec31f));
-    background: linear-gradient(to bottom, #addc54 0%, #7ec31f 100%);
-    border: 1px solid #3b9a00;
-}
-
-.redButton {
-    background: -webkit-gradient(linear, left top, left bottom, from(#f65e70), to(#f03848));
-    background: linear-gradient(to bottom, #f65e70 0%, #f03848 100%);
-    border: 1px solid #a2202a;
-}
-
-.buttons {
-    width: 342px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-
 /* FORMS */
 
 .inputsWrapper {
@@ -112,7 +65,7 @@ h2 {
     position: relative;
 }
 
-.whiteBox {
+form {
     width: 380px;
     background-color: #FFF;
     position: absolute;
@@ -136,6 +89,54 @@ h2 {
     align-items: center;
 }
 
+/* BUTTONS */
+
+button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 45px;
+    width: 342px;
+    font-size: 1.3em;
+    border-radius: 5px;
+    color: #FFF;
+    text-shadow: 1px 1px #000;
+    cursor: pointer;
+    transition: opacity .3s ease-out;
+}
+
+button:hover {
+    opacity: .5;
+}
+
+.greenButton {
+    background: -webkit-gradient(linear, left top, left bottom, from(#addc54), to(#7ec31f));
+    background: linear-gradient(to bottom, #addc54 0%, #7ec31f 100%);
+    border: 1px solid #3b9a00;
+}
+
+.redButton {
+    background: -webkit-gradient(linear, left top, left bottom, from(#f65e70), to(#f03848));
+    background: linear-gradient(to bottom, #f65e70 0%, #f03848 100%);
+    border: 1px solid #a2202a;
+}
+
+.buttons {
+    width: 342px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
 /* REGISTER FORM */
 
 .registerFormWrapper {
@@ -145,12 +146,13 @@ h2 {
 }
 
 .registerForm {
-    height: 450px;
+    height: 460px;
 }
 
-.registerInputs {
-    height: 410px;
+.registerForm form {
+    height: 420px;
 }
+
 
 /* EMAIL FORM */
 
@@ -165,7 +167,7 @@ h2 {
     margin-bottom: 40px;
 }
 
-.emailInputs {
+.emailForm form {
     height: 500px;
 }
 
@@ -181,12 +183,12 @@ h2 {
     height: 260px;
 }
 
-.signInForm .checkInput {
-    width: auto;
+.signInForm form {
+    height: 220px;
 }
 
-.signInInputs {
-    height: 220px;
+.signInForm .checkInput {
+    width: auto;
 }
 
 .signInForm button {
@@ -206,7 +208,7 @@ h2 {
     height: 260px;
 }
 
-.recoverInputs {
+.recoverForm form {
     height: 220px;
 }
 
@@ -226,7 +228,7 @@ h2 {
     height: 200px;
 }
 
-.subscribeInputs {
+.subscribeForm form {
     height: 160px;
 }
 
@@ -236,9 +238,7 @@ h2 {
 
 /* INPUTS */
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
+input:not([type="checkbox"]),
 select {
     border: none;
     height: inherit;
